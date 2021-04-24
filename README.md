@@ -1,8 +1,8 @@
 # Dev-Server-Dockerized
-## Apache, PHP and MariaDB for development (testing) purposes using docker-compose.
+### Dockerized Apache, PHP and MariaDB for development / testing purposes using docker-compose.
 
 ## Why did I create this?
-Sometimes I need a local development environment for testing applications that I'm working on. I used to use 'XAMPP' or other tools for this but especially since I often switch devices (and even operating systems), I've decided to 'dockerize' my development (/testing) environment to be able to spin up a local MySQL (/MariaDB) or Apache server easily.
+Sometimes I need a local development environment for testing applications that I'm working on. I used to use 'XAMPP' or other tools for this but especially since I often switch devices (and even operating systems), I've decided to 'dockerize' my development / testing environment to be able to spin up a local MySQL / MariaDB or Apache server easily.
 
 ## What pre-made images does this use?
 * [php:apache](https://hub.docker.com/_/php) *(latest version)*
@@ -29,6 +29,6 @@ Sometimes I need a local development environment for testing applications that I
 ```127.0.0.1:8080``` - phpmyadmin (use 'root' as username and the *MYSQL_ROOT_PASSWORD* as password)
 
 ## Installing custom php extensions
-Since I also need the possibilty of installing custom php extensions, I created the 'Dockerfile' so that the php-apache image is a custom build. In the Dockerfile you can add all the php extensions you want to install (as far as they aren't already bundled with php).
+Since I also need the possibilty of installing custom php extensions, I created the 'Dockerfile' so that the php-apache image is a custom build. In the Dockerfile you can add all the php extensions you want to install (as far as they aren't already included in php).
 
-By default the php extension 'mysqli' will be installed. You can add your own ones by listing them after the 'docker-php-ext-install' (seperated by a space).
+By default, the php extension 'mysqli' will be installed. You can add your own ones by listing them after 'docker-php-ext-install' (seperated by a space).
